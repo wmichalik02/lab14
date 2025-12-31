@@ -1,18 +1,28 @@
-<h2>Szczegóły osoby</h2>
+<mat-card class="card">
+  <mat-card-title>Szczegóły osoby</mat-card-title>
 
-@if (person) {
+  <mat-card-content>
+    @if (person) {
 
-  <p><b>Imię:</b> {{ person.firstName }}</p>
-  <p><b>Nazwisko:</b> {{ person.familyName }}</p>
-  <p><b>Wiek:</b> {{ person.age }}</p>
+      <div class="grid">
+        <div><b>Imię:</b> {{ person.firstName }}</div>
+        <div><b>Nazwisko:</b> {{ person.familyName }}</div>
+        <div><b>Wiek:</b> {{ person.age }}</div>
+      </div>
 
-  <h3>Adres</h3>
-  <p><b>Miasto:</b> {{ person.address?.city }}</p>
-  <p><b>Ulica:</b> {{ person.address?.street }}</p>
-  <p><b>Kod pocztowy:</b> {{ person.address?.postCode }}</p>
+      <h3 class="section">Adres</h3>
+      <div class="grid">
+        <div><b>Miasto:</b> {{ person.address?.city }}</div>
+        <div><b>Ulica:</b> {{ person.address?.street }}</div>
+        <div><b>Kod pocztowy:</b> {{ person.address?.postCode }}</div>
+      </div>
 
-} @else {
+    } @else {
+      <p class="muted">Nie znaleziono osoby.</p>
+    }
+  </mat-card-content>
 
-  <p>Nie znaleziono osoby.</p>
-
-}
+  <mat-card-actions align="end">
+    <a mat-stroked-button routerLink="/">Powrót</a>
+  </mat-card-actions>
+</mat-card>

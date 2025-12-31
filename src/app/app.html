@@ -1,10 +1,13 @@
-<h1>Rejestr osób</h1>
+<mat-toolbar class="topbar">
+  <span class="brand">Rejestr osób</span>
+  <span class="spacer"></span>
 
-<nav>
-  <a routerLink="/">Lista osób</a> |
-  <a routerLink="/add">Dodaj osobę</a>
-</nav>
+  <a mat-button routerLink="/">Lista osób</a>
+  <a mat-raised-button color="primary" routerLink="/add">Dodaj osobę</a>
+</mat-toolbar>
 
-<hr />
+<mat-divider></mat-divider>
 
-<router-outlet></router-outlet>
+<div class="page">
+  <router-outlet></router-outlet>
+</div>

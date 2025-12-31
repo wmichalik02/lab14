@@ -1,0 +1,15 @@
+.card {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 16px;
+}
+
+.grid {
+  display: grid;
+  gap: 8px;
+}
+
+.section {
+  margin-top: 16px;
+  letter-spacing: 0.2px;
+}

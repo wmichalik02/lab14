@@ -4,10 +4,17 @@ import { RouterLink } from '@angular/router';
 
 import { PersonService, Person } from '../person';
 
+import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+
+
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, MatCardModule, MatListModule, MatButtonModule, MatIconModule, MatDividerModule],
   templateUrl: './list.html',
   styleUrls: ['./list.css'],
 })
