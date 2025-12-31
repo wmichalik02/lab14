@@ -1,0 +1,18 @@
+<h2>Szczegóły osoby</h2>
+
+@if (person) {
+
+  <p><b>Imię:</b> {{ person.firstName }}</p>
+  <p><b>Nazwisko:</b> {{ person.familyName }}</p>
+  <p><b>Wiek:</b> {{ person.age }}</p>
+
+  <h3>Adres</h3>
+  <p><b>Miasto:</b> {{ person.address?.city }}</p>
+  <p><b>Ulica:</b> {{ person.address?.street }}</p>
+  <p><b>Kod pocztowy:</b> {{ person.address?.postCode }}</p>
+
+} @else {
+
+  <p>Nie znaleziono osoby.</p>
+
+}
